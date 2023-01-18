@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const cards = [{ color: 'B000DC' }, { color: 'DC4200' }, { color: '00DC8D' }]
+const avatars = [
+  { image: '/avatars/Beverly.png' },
+  { image: '/avatars/Bill.png' },
+  { image: '/avatars/Claudia.png' },
+  { image: '/avatars/Avatar.png' },
+]
+---
+
+<Layout title="About us page">
+  <section class="relative flex w-4/5 gap-8 py-8 mx-auto">
+    <div class="w-1/2 space-y-8">
+      <h2 class="text-xs">
+        Home > <span class="text-[#E47500]">About us</span>
+      </h2>
+      <h1 class="text-3xl font-bold">
+        Lorem Ipsum is simply dummy text of the printing and.
+      </h1>
+      <p class="font-medium">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard.
+      </p>
+      <button class="bg-[#FA8305] font-medium py-3 px-7 rounded-full">
+        Get in touch ></button
+      >
+    </div>
+    <div class="w-1/2"></div>
+  </section>
+
+  <section class="w-4/5 mx-auto space-y-8">
+    <h2 class="text-2xl font-semibold">Why work with us</h2>
+    <ul class="flex justify-between gap-4">
+      {
+        cards.map(({ color }) => (
+          <li class="space-y-4 py-12 px-8 bg-[#1C140F] rounded-[20px] max-w-xs">
+            <h4 class={`px-4 py-2 text-sm rounded-lg bg-[#${color}]/10`}>
+              Lorem ipsum
+            </h4>
+            <h3 class="text-xl font-semibold">Lorem ipsum</h3>
+            <p class="text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s,
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="bg-[#1C140F] mt-40">
+    <div class="flex w-4/5 gap-20 pt-40 mx-auto">
+      <img src="/images/squared-lol.png" class="object-cover" alt="" />
+      <div class="mt-10 space-y-10">
+        <h5 class="font-medium">Lorem ipsum</h5>
+        <h2 class="text-3xl font-semibold">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </h2>
+        <p class="">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries,
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-4/5 mx-auto my-40 space-y-10">
+    <h2 class="text-2xl font-semibold">Our Team</h2>
+    <ul class="flex justify-between gap-8">
+      {
+        avatars.map(({ image }) => (
+          <li class="space-y-2 flex flex-col p-8 bg-[#1C140F] rounded-[20px] flex-1 items-center">
+            <img src={image} alt="" />
+            <h3 class="text-xl font-semibold">John Peter</h3>
+            <h4 class="font-light">COO</h4>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
