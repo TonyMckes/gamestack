@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon'
+
+interface Props {
+  label: string
+  icon: string
+}
+
+const { label, icon } = Astro.props
+---
+
+<li class="relative flex flex-col items-center flex-1 gap-4 p-2 overflow-hidden rounded-lg min-w-max">
+  <div
+    aria-hidden="true"
+    class="relative flex items-center justify-center w-16 h-16 bg-white rounded-full"
+  >
+    <Icon name={icon} class="text-[#DC7000] w-10 h-10" />
+  </div>
+  <a
+    class="whitespace-nowrap after:absolute after:inset-0 after:hover:bg-white/10"
+    href="#">{label}</a
+  >
+  <Icon
+    name="ic:baseline-arrow-back"
+    class="w-8 h-8 rotate-180 text-[#DC7000]"
+  />
+</li>
