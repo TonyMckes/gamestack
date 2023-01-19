@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon'
+
+interface Props {
+  color?: 'light' | 'dark'
+}
+
+const { color = 'light' } = Astro.props
+const socials = [
+  { label: 'Facebook', icon: 'ri:facebook-fill' },
+  { label: 'Instagram', icon: 'ri:instagram-line' },
+  { label: 'Twitter', icon: 'ri:twitter-fill' },
+  { label: 'LinkedIn', icon: 'ri:linkedin-fill' },
+]
+---
+
+<ul class="flex gap-4">
+  {
+    socials.map(({ icon, label }) => (
+      <li>
+        <a
+          class={`flex items-center justify-center w-8 h-8 ${
+            color === 'light' ? 'bg-white' : 'bg-[#1C140F]'
+          } rounded-full`}
+          href="#"
+          aria-label={label}
+        >
+          <Icon
+            class={`w-5 h-5 ${color === 'dark' ? 'text-white' : 'text-black'}`}
+            name={icon}
+          />
+        </a>
+      </li>
+    ))
+  }
+</ul>

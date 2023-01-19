@@ -1,12 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
-
-const socials = [
-  { label: 'Facebook', icon: 'ri:facebook-fill' },
-  { label: 'Instagram', icon: 'ri:instagram-line' },
-  { label: 'Twitter', icon: 'ri:twitter-fill' },
-  { label: 'LinkedIn', icon: 'ri:linkedin-fill' },
-]
+import SocialsLinks from './SocialsLinks.astro'
 ---
 
 <footer class="w-5/6 mx-auto space-y-8 mt-52">
@@ -40,21 +33,7 @@ const socials = [
     </div>
 
     <div class="flex items-end">
-      <ul class="flex gap-4">
-        {
-          socials.map(({ icon, label }) => (
-            <li>
-              <a
-                class="flex items-center justify-center w-8 h-8 bg-white rounded-full"
-                href="#"
-                aria-label={label}
-              >
-                <Icon class="w-5 h-5 text-black" name={icon} />
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <SocialsLinks />
     </div>
   </div>
 
