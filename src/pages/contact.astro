@@ -1,0 +1,121 @@
+---
+import { Icon } from 'astro-icon'
+import Map from '../components/Map.astro'
+import SocialsLinks from '../components/SocialsLinks.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Contact us">
+  <section class="py-4 mx-auto space-y-4 text-center rounded-lg w-4/2">
+    <h2>
+      Home > <span class="text-[#E47500]">Contact us</span>
+    </h2>
+    <h1 class="text-3xl font-semibold">
+      Lorem Ipsum is simply dummy text of the printing and.
+    </h1>
+    <p class="font-medium">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <div class="!mt-20">
+      <Map />
+    </div>
+  </section>
+
+  <section class="w-4/5 mx-auto my-40">
+    <div class="flex justify-between py-5 divide-x divide-white">
+      <div class="flex flex-col justify-center flex-1 gap-8 px-8 py-4">
+        <h3>Follow us</h3>
+        <SocialsLinks color="dark" />
+      </div>
+
+      <p class="flex items-center justify-center flex-1 gap-4 px-8 py-4">
+        <Icon class="w-6 h-6" name="ic:baseline-phone-in-talk" /> +94 4444 5555 6
+      </p>
+
+      <p class="flex items-center justify-center flex-1 gap-4 px-8 py-4">
+        <Icon class="w-6 h-6" name="ic:baseline-location-on" /> but also the leap
+        into electronic typesetting
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-[#1C140F] relative space-y-8 text-center py-20">
+    <img
+      class="absolute top-0 right-0"
+      src="/line-1.svg"
+      aria-hidden="true"
+      alt=""
+    />
+    <h2 class="text-3xl">Say hello</h2>
+    <p class="text-sm font-medium">
+      Lorem Ipsum is simply dummy text of the printing .
+    </p>
+
+    <form class="flex flex-col mx-auto !mt-20 w-2/4 text-left" action="">
+      <div class="flex gap-6">
+        <div class="w-full">
+          <label
+            for="form-firstname"
+            class="text-[#4F4F4F] mt-8 mb-2 text-sm font-medium block"
+            >First Name</label
+          >
+          <input
+            class="rounded-lg p-4 bg-white/5 ring-[#CECECE] focus:outline-none ring-1 w-full"
+            type="text"
+            name="first-name"
+            id="form-firstname"
+          />
+        </div>
+
+        <div class="w-full">
+          <label
+            for="form-lastname"
+            class="text-[#4F4F4F] mt-8 mb-2 text-sm font-medium block"
+            >Last Name</label
+          >
+          <input
+            class="rounded-lg p-4 bg-white/5 ring-[#CECECE] focus:outline-none ring-1 w-full"
+            type="text"
+            name="last-lastname"
+          />
+        </div>
+      </div>
+
+      <label
+        for="form-email"
+        class="text-[#4F4F4F] mt-8 mb-2 text-sm font-medium block"
+        >Email Address</label
+      >
+      <input
+        class="rounded-lg p-4 bg-white/5 ring-[#CECECE] focus:outline-none ring-1 w-full"
+        type="email"
+        name="email-address"
+        id="form-email"
+      />
+
+      <label
+        for="form-message"
+        class="text-[#4F4F4F] mt-8 mb-2 text-sm font-medium block"
+        >Message</label
+      >
+      <textarea
+        class="rounded-lg p-4 z-10 bg-white/5 ring-[#CECECE] focus:outline-none ring-1 w-full"
+        id="form-message"
+        name="message"
+        rows="8"></textarea>
+
+      <button
+        class="bg-[#DC7000] self-end hover:bg-[#DC7000]/90 py-4 px-8 mt-8 rounded-[10px]"
+      >
+        Get in touch
+      </button>
+    </form>
+    <img
+      class="absolute bottom-0 left-0 z-0"
+      src="/line-2.svg"
+      aria-hidden="true"
+      alt=""
+    />
+  </section>
+</Layout>
