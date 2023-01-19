@@ -1,0 +1,117 @@
+---
+import { Icon } from 'astro-icon'
+import Layout from '../layouts/Layout.astro'
+
+const services = [
+  { label: 'Clients', total: '90+', icon: 'ic:baseline-person' },
+  { label: 'Countries', total: '30+', icon: 'ic:baseline-location-on' },
+  { label: 'Projects', total: '40+', icon: 'ri:server-fill' },
+]
+
+const lists = [
+  { image: '/images/squared-stray.png' },
+  { image: '/images/squared-lol.png' },
+  { image: '/images/squared-crysis.png' },
+]
+---
+
+<Layout title="Home page">
+  <section class="w-4/5 py-8 mx-auto space-y-4 text-center">
+    <h2>
+      Home > <span class="text-[#E47500]">Services</span>
+    </h2>
+    <h1 class="text-3xl font-semibold">
+      Lorem Ipsum is simply dummy text of the printing and.
+    </h1>
+    <p class="font-medium">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <div
+      class="bg-[#1C140F] !mt-12 py-5 rounded-[10px] flex divide-x divide-white justify-between"
+    >
+      {
+        services.map(({ total, icon, label }) => (
+          <div class="flex items-center justify-center flex-1 px-10 py-5 space-x-6">
+            <div class="bg-[#FFECEC] rounded-full w-14 h-14 flex items-center justify-center">
+              <Icon class="text-[#E47500] w-8 h-8" name={icon} />
+            </div>
+            <h3>
+              {total} <br />
+              {label}
+            </h3>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="flex w-4/5 gap-20 mx-auto my-40">
+    <div class="relative w-3/5">
+      <img src="/images/video-spiderman.png" alt="" />
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 flex items-center justify-center transition-colors cursor-pointer group hover:bg-black/10"
+      >
+        <Icon
+          class="w-16 h-16 transition-transform group-hover:scale-105"
+          name="carbon:play-outline"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col justify-between w-2/5">
+      <h2 class="text-3xl font-bold">Lorem Ipsum is simply dummy text.</h2>
+      <p class="text-sm">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.Lorem Ipsum is simply dummy .
+      </p>
+      <ul class="space-y-4">
+        {
+          new Array(4).fill(null).map(() => (
+            <li class="flex items-center gap-2">
+              <Icon
+                class="text-[#2FAB73] w-5 h-5 inline"
+                name="carbon:checkmark-filled"
+              />{' '}
+              Lorem Ipsum is simply
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="w-4/5 mx-auto my-40">
+    <ul class="space-y-48">
+      {
+        lists.map(({ image }) => (
+          <li class="flex flex-col gap-10 lg:gap-28 lg:even:flex-row lg:odd:flex-row-reverse">
+            <img class="object-contain" src={image} alt="" />
+            <div class="flex flex-col justify-between flex-1 my-4 space-y-10">
+              <h3 class="text-3xl font-medium">
+                Lorem Ipsum is simply dummy text dummy text{' '}
+              </h3>
+              <p class="text-lg">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries,
+              </p>
+              <p class="text-lg">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.{' '}
+              </p>
+              <a
+                class="bg-[#DC7000] py-3 px-10 w-fit hover:bg-[#DC7000]/90"
+                href="#"
+              >
+                Read more
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
