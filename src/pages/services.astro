@@ -1,4 +1,5 @@
 ---
+import '@splidejs/splide/css'
 import { Icon } from 'astro-icon'
 import Layout from '../layouts/Layout.astro'
 
@@ -12,6 +13,29 @@ const lists = [
   { image: '/images/squared-stray.png' },
   { image: '/images/squared-lol.png' },
   { image: '/images/squared-crysis.png' },
+]
+
+const reviews = [
+  {
+    image: '/person-1.png',
+    name: 'Viezh Robert',
+    location: 'Warsaw, Poland',
+    about:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+  },
+  {
+    image: '/person-2.png',
+    name: 'Yessica Christy',
+    location: 'Shanxi, China',
+    about: 'Lorem Ipsum is simply dummy text of the printing and ',
+  },
+  {
+    image: '/person-3.png',
+    name: 'Kim Young Jou',
+    location: 'Seoul, South Korea',
+    about:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  },
 ]
 ---
 
@@ -115,5 +139,47 @@ const lists = [
     </ul>
   </section>
 
-  <!-- TODO: add carousel -->
+  <section
+    class="bg-[#1C140F] splide py-20 relative"
+    aria-labelledby="carousel-heading"
+  >
+    <div class="w-2/5 mx-auto space-y-8">
+      <h2 class="text-4xl font-medium font-rubik" id="carousel-heading">
+        Trusted by Thousands of Happy Customer
+      </h2>
+      <p class="text-sm">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.Lorem Ipsum is simply dummy .
+      </p>
+    </div>
+
+    <div class="my-28 splide__track">
+      <ul class="splide__list">
+        {
+          reviews.map(({ about, image, location, name }) => (
+            <li class="border-2 rounded-[10px] p-8 splide__slide font-rubik max-w-sm">
+              <div class="flex items-center gap-4">
+                <img class="rounded-full" src={image} alt="" />
+                <div>
+                  <h4 class="text-lg font-medium">{name}</h4>
+                  <p class="text-sm text-[#4F5665]">{location}</p>
+                </div>
+                <p class="flex items-center text-sm grow">
+                  4.5{' '}
+                  <Icon class="w-4 h-4 text-[#FEA250]" name="ic:round-star" />
+                </p>
+              </div>
+              <p>{about}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="hidden splide__arrows"></div>
+  </section>
 </Layout>
+
+<script>
+  import '../scripts/splide'
+</script>
