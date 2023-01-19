@@ -1,0 +1,100 @@
+---
+import { Icon } from 'astro-icon'
+import Layout from '../layouts/Layout.astro'
+
+const articles = [
+  { image: '/images/rectangle-lol.png' },
+  { image: '/images/rectangle-stray.png' },
+]
+
+const news = [
+  { image: '/squared/Rectangle.png', color: 'FF8484' },
+  { image: '/squared/Rectangle-1.png', color: '2351F5' },
+  { image: '/squared/Rectangle-2.png', color: 'FF7C32' },
+  { image: '/squared/Rectangle-3.png', color: '2351F5' },
+  { image: '/squared/Rectangle-4.png', color: '23A54F' },
+  { image: '/squared/Rectangle-5.png', color: '2351F5' },
+  { image: '/squared/Rectangle-6.png', color: '9921C3' },
+]
+---
+
+<Layout title="Home page">
+  <section class="w-4/5 py-8 mx-auto space-y-4 text-center">
+    <h2>
+      Home > <span class="text-[#E47500]">News</span>
+    </h2>
+    <h1 class="text-3xl font-semibold">
+      Lorem Ipsum is simply dummy text of the printing and.
+    </h1>
+    <p class="font-medium">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <form action="" class="!mt-20">
+      <label
+        class="relative flex items-center justify-center"
+        aria-label="Search bar"
+      >
+        <Icon class="w-6 h-6 translate-x-10" name="ph:magnifying-glass" />
+        <input
+          class="bg-[#1C140F] px-6 pl-14 rounded-lg py-3 placeholder:text-white"
+          type="text"
+          placeholder="Search"
+        />
+      </label>
+    </form>
+  </section>
+
+  <section class="flex w-4/5 gap-10 mx-auto my-40">
+    <div class="w-1/2 space-y-20">
+      {
+        articles.map(({ image }) => (
+          <article class="space-y-6 ">
+            <img class="rounded-[20px]" src={image} alt="" />
+            <div class="py-3 space-x-4">
+              <span class="bg-[#2351F5] px-8 py-3">Jogn Smith</span>
+              <span>.5min</span>
+            </div>
+            <h2 class="text-3xl font-semibold">
+              Lorem Ipsum is simply dummy text dummy text
+            </h2>
+            <p class="text-lg">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries,
+            </p>
+            <p class="text-lg">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </article>
+        ))
+      }
+    </div>
+
+    <aside class="w-1/2">
+      <ul class="space-y-10">
+        {
+          news.map(({ image, color }) => (
+            <li class="">
+              <article class="flex gap-8">
+                <img class="rounded-[20px]" src={image} alt="" />
+                <div class="flex flex-col gap-4 justify-evenly">
+                  <div class="py-3 space-x-4 text-sm whitespace-nowrap">
+                    <span class={`bg-[#${color}] px-6 py-3`}>John smash</span>
+                    <span>.5min</span>
+                  </div>
+                  <h3 class="text-2xl font-semibold">
+                    Lorem Ipsum is simply dummy text dummy text ?{' '}
+                  </h3>
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+  </section>
+</Layout>
