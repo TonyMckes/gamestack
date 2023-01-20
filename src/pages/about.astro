@@ -12,7 +12,7 @@ const avatars = [
 
 <Layout title="About us">
   <section class="relative flex w-4/5 gap-8 py-8 mx-auto">
-    <div class="w-1/2 space-y-8">
+    <div class="md:w-1/2 space-y-8">
       <h2 class="text-xs">
         Home > <span class="text-[#E47500]">About us</span>
       </h2>
@@ -27,15 +27,15 @@ const avatars = [
         Get in touch ></button
       >
     </div>
-    <div class="w-1/2"></div>
+    <div class="hidden md:w-1/2 md:static"></div>
   </section>
 
   <section class="w-4/5 mx-auto space-y-8">
     <h2 class="text-2xl font-semibold">Why work with us</h2>
-    <ul class="flex justify-between gap-4">
+    <ul class="flex flex-col md:flex-row justify-between gap-4">
       {
         cards.map(({ color }) => (
-          <li class="space-y-4 py-12 px-8 bg-[#1C140F] rounded-[20px] max-w-xs">
+          <li class="space-y-4 py-12 px-8 bg-[#1C140F] rounded-[20px] md:max-w-xs">
             <h4 class={`px-4 py-2 text-sm rounded-lg bg-[#${color}]/10`}>
               Lorem ipsum
             </h4>
@@ -52,9 +52,9 @@ const avatars = [
   </section>
 
   <section class="bg-[#1C140F] mt-40">
-    <div class="flex w-4/5 gap-20 pt-40 mx-auto">
-      <img src="/images/squared-lol.png" class="object-cover" alt="" />
-      <div class="mt-10 space-y-10">
+    <div class="flex w-4/5 flex-col lg:flex-row gap-20 py-40 mx-auto">
+      <img src="/images/squared-lol.png" class="md:object-cover" alt="" />
+      <div class="lg:mt-10 space-y-10">
         <h5 class="font-medium">Lorem ipsum</h5>
         <h2 class="text-3xl font-semibold">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -73,10 +73,10 @@ const avatars = [
 
   <section class="w-4/5 mx-auto my-40 space-y-10">
     <h2 class="text-2xl font-semibold">Our Team</h2>
-    <ul class="flex justify-between gap-8">
+    <ul class="flex justify-between gap-8 flex-wrap">
       {
         avatars.map(({ image }) => (
-          <li class="space-y-2 flex flex-col p-8 bg-[#1C140F] rounded-[20px] flex-1 items-center">
+          <li class="space-y-2 flex flex-col whitespace-nowrap p-8 bg-[#1C140F] rounded-[20px] flex-1 items-center">
             <img src={image} alt="" />
             <h3 class="text-xl font-semibold">John Peter</h3>
             <h4 class="font-light">COO</h4>
