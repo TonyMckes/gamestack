@@ -23,7 +23,7 @@ const links = [
 
 <Layout title="Home">
   <section class="relative flex w-4/5 gap-8 py-8 mx-auto">
-    <div class="w-1/2 space-y-8">
+    <div class="space-y-8 md:w-1/2">
       <h2 class="text-[#E87D0E] font-bold text-xl">3D game Dev</h2>
       <h1 class="text-5xl font-bold">Work that we produce for our clients</h1>
       <p class="font-medium">
@@ -34,43 +34,44 @@ const links = [
         Get more details</button
       >
     </div>
-    <div class="w-1/2"></div>
+    <div class="hidden w-1/2 md:static"></div>
   </section>
 
   <section class="w-4/5 mx-auto space-y-4">
-    <div class="flex justify-between">
+    <div class="flex items-center justify-between">
       <h2 class="text-3xl font-bold font-rubik">Currently Trending Games</h2>
-      <button class="px-6 py-2 rounded-lg bg-white/10 hover:bg-white/25"
+      <button
+        class="px-6 py-2 rounded-lg whitespace-nowrap bg-white/10 hover:bg-white/25"
         >SEE ALL</button
       >
     </div>
-    <ul class="flex gap-4">
+    <ul class="flex flex-col gap-4 md:flex-row md:flex-wrap">
       {carousel.map(({ image }) => <SmallCard imagePath={image} />)}
     </ul>
   </section>
 
-  <p class="w-3/5 py-20 mx-auto text-3xl font-semibold text-center">
+  <p class="w-4/5 py-20 mx-auto text-3xl font-semibold text-center md:w-3/5">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   </p>
 
-  <section class="w-4/5 mx-auto space-y-4">
-    <h2 class="text-3xl font-semibold">Lorem Ipsum</h2>
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s,
-    </p>
-    <img class="rounded-md !mt-10" src="/images/wide-spiderman.png" alt="" />
+  <section class="mx-auto space-y-4 md:w-4/5">
+    <div class="w-4/5 mx-auto">
+      <h2 class="text-3xl font-semibold">Lorem Ipsum</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s,
+      </p>
+    </div>
+    <img class="md:rounded-md !mt-10" src="/images/wide-spiderman.png" alt="" />
   </section>
 
-  <!-- bg-[url('/images/wide-mountains.png')] -->
-
   <section
-    class="flex items-center relative bg-[url('/images/wide-mountains.png')] bg-cover min-h-screen"
+    class="flex items-center relative bg-[url('/images/wide-mountains.png')] my-20 bg-cover min-h-screen"
   >
     <div aria-hidden="true" class="absolute inset-0 bg-black/80"></div>
-    <div class="z-10 w-4/5 mx-auto">
-      <div class="w-3/5 mx-auto space-y-8 text-center">
+    <div class="z-0 w-4/5 mx-auto ">
+      <div class="mx-auto space-y-8 text-center md:w-3/5">
         <h2 class="text-3xl font-bold">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
@@ -99,7 +100,7 @@ const links = [
         industry.
       </p>
     </div>
-    <div class="flex flex-wrap w-4/5 gap-2 mx-auto">
+    <div class="flex flex-col flex-wrap gap-4 mx-auto md:items-center lg:flex md:grid-cols-2 md:w-4/5 md:gap-6 lg:gap-2 md:grid lg:flex-row ">
       <img src="/images/Rectangle 15.png" alt="" />
       <img src="/images/Rectangle 16.png" alt="" />
       <img src="/images/Rectangle 17.png" alt="" />
