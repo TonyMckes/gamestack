@@ -1,10 +1,23 @@
 ---
+import { Icon } from 'astro-icon'
 ---
 
-<header class="flex justify-between px-4 py-8">
+<header class="sticky top-0 z-10 flex justify-between px-4 py-8 md:relative">
   <a href="/" class="px-6 py-2 rounded-md hover:bg-white/20">Logo</a>
-  <nav>
-    <ul class="flex gap-4">
+  <button
+    aria-label="Open menu"
+    class="md:hidden justify-end z-50 bg-[#FA9021] hover:bg-[#FA9021]/95 rounded-md p-2 navbar-button"
+  >
+    <Icon class="w-6 h-6" name="charm:menu-hamburger" />
+  </button>
+  <nav class="absolute top-0 right-0 md:static">
+    <div
+      class="fixed inset-0 z-40 invisible transition-opacity duration-300 opacity-0 md:hidden bg-black/5 backdrop-blur-sm navbar-background"
+    >
+    </div>
+    <ul
+      class="absolute navbar-menu transition-all invisible md:visible whitespace-nowrap right-0 top-0 z-40 flex flex-col gap-4 p-8 md:p-0 md:m-0 rounded-[20px] mx-10 my-12 bg-neutral-900 md:bg-transparent md:static md:flex-row md:py-2"
+    >
       <li>
         <a class="px-6 py-2 rounded-md hover:bg-white/20" href="/"> Home</a>
       </li>
@@ -32,3 +45,7 @@
     </ul>
   </nav>
 </header>
+
+<script>
+  import '../scripts/menu'
+</script>
