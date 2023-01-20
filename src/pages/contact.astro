@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Contact us">
-  <section class="py-4 mx-auto space-y-4 text-center rounded-lg w-4/2">
+  <section class="w-4/5 py-4 mx-auto space-y-4 text-center rounded-lg">
     <h2>
       Home > <span class="text-[#E47500]">Contact us</span>
     </h2>
@@ -23,7 +23,7 @@ import Layout from '../layouts/Layout.astro'
   </section>
 
   <section class="w-4/5 mx-auto my-40">
-    <div class="flex justify-between py-5 divide-x divide-white">
+    <div class="flex flex-col justify-between py-5 divide-y divide-white md:divide-x md:divide-y-0 md:flex-row">
       <div class="flex flex-col justify-center flex-1 gap-8 px-8 py-4">
         <h3>Follow us</h3>
         <SocialsLinks color="dark" />
@@ -40,7 +40,7 @@ import Layout from '../layouts/Layout.astro'
     </div>
   </section>
 
-  <section class="bg-[#1C140F] relative space-y-8 text-center py-20">
+  <section class="bg-[#1C140F] relative space-y-8 text-center py-20 my-20">
     <img
       class="absolute top-0 right-0"
       src="/line-1.svg"
@@ -52,8 +52,8 @@ import Layout from '../layouts/Layout.astro'
       Lorem Ipsum is simply dummy text of the printing .
     </p>
 
-    <form class="flex flex-col mx-auto !mt-20 w-2/4 text-left" action="">
-      <div class="flex gap-6">
+    <form class="flex flex-col mx-auto !mt-20 w-4/5 lg:w-2/4 text-left" action="">
+      <div class="flex flex-col md:gap-6 md:flex-row">
         <div class="w-full">
           <label
             for="form-firstname"
