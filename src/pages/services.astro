@@ -72,7 +72,7 @@ const reviews = [
 
   <section class="flex flex-col md:flex-row w-4/5 gap-20 mx-auto my-40">
     <div class="relative md:w-3/5">
-      <img src="/images/video-spiderman.png" alt="" />
+      <img loading="lazy" src="/images/video-spiderman.png" alt="" />
       <div
         aria-hidden="true"
         class="absolute inset-0 flex items-center justify-center transition-colors cursor-pointer group hover:bg-black/10"
@@ -110,7 +110,7 @@ const reviews = [
       {
         lists.map(({ image }) => (
           <li class="flex flex-col gap-10 lg:gap-28 lg:even:flex-row lg:odd:flex-row-reverse">
-            <img class="object-contain" src={image} alt="" />
+            <img loading="lazy" class="object-contain" src={image} alt="" />
             <div class="flex flex-col justify-between flex-1 my-4 space-y-10">
               <h3 class="text-3xl font-medium">
                 Lorem Ipsum is simply dummy text dummy text{' '}
@@ -159,7 +159,7 @@ const reviews = [
           reviews.map(({ about, image, location, name }) => (
             <li class="border-2 rounded-[10px] p-8 splide__slide font-rubik max-w-sm">
               <div class="flex items-center gap-4">
-                <img class="rounded-full" src={image} alt="" />
+                <img loading="lazy" class="rounded-full" src={image} alt="" />
                 <div>
                   <h4 class="text-lg font-medium">{name}</h4>
                   <p class="text-sm text-[#4F5665]">{location}</p>

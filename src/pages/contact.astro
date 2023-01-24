@@ -23,7 +23,9 @@ import Layout from '../layouts/Layout.astro'
   </section>
 
   <section class="w-4/5 mx-auto my-40">
-    <div class="flex flex-col justify-between py-5 divide-y divide-white md:divide-x md:divide-y-0 md:flex-row">
+    <div
+      class="flex flex-col justify-between py-5 divide-y divide-white md:divide-x md:divide-y-0 md:flex-row"
+    >
       <div class="flex flex-col justify-center flex-1 gap-8 px-8 py-4">
         <h3>Follow us</h3>
         <SocialsLinks color="dark" />
@@ -42,6 +44,7 @@ import Layout from '../layouts/Layout.astro'
 
   <section class="bg-[#1C140F] relative space-y-8 text-center py-20 my-20">
     <img
+      loading="lazy"
       class="absolute top-0 right-0"
       src="/line-1.svg"
       aria-hidden="true"
@@ -52,7 +55,10 @@ import Layout from '../layouts/Layout.astro'
       Lorem Ipsum is simply dummy text of the printing .
     </p>
 
-    <form class="flex flex-col mx-auto !mt-20 w-4/5 lg:w-2/4 text-left" action="">
+    <form
+      class="flex flex-col mx-auto !mt-20 w-4/5 lg:w-2/4 text-left"
+      action=""
+    >
       <div class="flex flex-col md:gap-6 md:flex-row">
         <div class="w-full">
           <label
@@ -112,6 +118,7 @@ import Layout from '../layouts/Layout.astro'
       </button>
     </form>
     <img
+      loading="lazy"
       class="absolute bottom-0 left-0 z-0"
       src="/line-2.svg"
       aria-hidden="true"

@@ -53,7 +53,12 @@ const avatars = [
 
   <section class="bg-[#1C140F] mt-40">
     <div class="flex w-4/5 flex-col lg:flex-row gap-20 py-40 mx-auto">
-      <img src="/images/squared-lol.png" class="md:object-cover" alt="" />
+      <img
+        loading="lazy"
+        src="/images/squared-lol.png"
+        class="md:object-cover"
+        alt=""
+      />
       <div class="lg:mt-10 space-y-10">
         <h5 class="font-medium">Lorem ipsum</h5>
         <h2 class="text-3xl font-semibold">
@@ -77,7 +82,7 @@ const avatars = [
       {
         avatars.map(({ image }) => (
           <li class="space-y-2 flex flex-col whitespace-nowrap p-8 bg-[#1C140F] rounded-[20px] flex-1 items-center">
-            <img src={image} alt="" />
+            <img loading="lazy" src={image} alt="" />
             <h3 class="text-xl font-semibold">John Peter</h3>
             <h4 class="font-light">COO</h4>
           </li>

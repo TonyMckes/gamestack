@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon'
-import { log } from 'astro/dist/core/logger/core'
 
 export interface Props {
   imagePath: string
@@ -10,7 +9,12 @@ const { imagePath } = Astro.props
 ---
 
 <li class="relative p-2 mx-auto text-center">
-  <img class="rounded-[20px]" src={`/images/card-${imagePath}.png`} alt="" />
+  <img
+    loading="lazy"
+    class="rounded-[20px]"
+    src={`/images/card-${imagePath}.png`}
+    alt=""
+  />
   <a
     href="#"
     class="after:absolute after:inset-0 after:hover:bg-white/10 after:rounded-[20px] flex items-center justify-center mt-4 text-2xl font-medium whitespace-nowrap"
