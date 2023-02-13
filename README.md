@@ -21,7 +21,7 @@ Frontend built as part of my learning process of the framework [Astro](https://a
 
 ## Getting Started
 
-These instructions will help you run the project on your local machine for development and testing purposes.
+These instructions will help you run the project on your local machine for development purposes.
 
 ### Perquisites
 
@@ -39,7 +39,7 @@ npm install
 
 ## Running Locally
 
-Once everything is set up, you can run the project development server or tests locally
+Once everything is set up, you can run the project development server locally
 
 ### Development Server
 
@@ -50,14 +50,6 @@ npm run dev
 ```
 
 Open [https://localhost:3000/](https://localhost:3000/) in your browser to see the web page.
-
-### Running Tests
-
-To run tests, run the following command
-
-```bash
-npm run test
-```
 
 ## Acknowledgements
 
