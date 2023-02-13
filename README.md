@@ -1,50 +1,69 @@
-# Welcome to [Astro](https://astro.build)
+# GameStack - Practice Project
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+Frontend built as part of my learning process of the framework [Astro](https://astro.build/), it is Gaming Platform Landing Page, a simple, clean, professional.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> Design is not my own, check [acknowledgements](#acknowledgements).
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Tech Stack
 
+- Language: TypeScript
+- Framework: Astro
+- Styling: Tailwind CSS
+- Deployment: Vercel
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Responsive design
 
+## Demo
+
+![Web Design](https://user-images.githubusercontent.com/78808163/218345201-d77d1729-5a1d-4e4b-9bf7-0ad19da91b78.png)
+
+## Getting Started
+
+These instructions will help you run the project on your local machine for development and testing purposes.
+
+### Perquisites
+
+Make sure to have everything that is required before you try to run the project.
+
+- [Node.js v16 or above](https://nodejs.org/en/download/)
+
+### Installation
+
+Install all dependencies required for the project with NPM (Node Package Manager).
+
+```bash
+npm install
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+
+## Running Locally
+
+Once everything is set up, you can run the project development server or tests locally
+
+### Development Server
+
+To run the development server, run the following command
+
+```bash
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Open [https://localhost:3000/](https://localhost:3000/) in your browser to see the web page.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Running Tests
 
-Any static assets, like images, can be placed in the `public/` directory.
+To run tests, run the following command
 
-## 🧞 Commands
+```bash
+npm run test
+```
 
-All commands are run from the root of the project, from a terminal:
+## Acknowledgements
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+- Thanks to [@Sanoj_Dilshan](https://www.figma.com/@Sanoj_Dilshan) for the [awesome design](https://www.figma.com/community/file/1058773912152023976)
+- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-## 👀 Want to learn more?
+## Contact Info
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Build by [@TonyMckes](https://tonymckes.vercel.app/) - feel free to contact me!
