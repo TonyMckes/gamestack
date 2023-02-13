@@ -14,6 +14,7 @@ Frontend built as part of my learning process of the framework [Astro](https://a
 ## Features
 
 - Responsive design
+- Multi-Page Application (MPA)
 
 ## Demo
 
