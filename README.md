@@ -24,7 +24,7 @@ Frontend built as part of my learning process of the framework [Astro](https://a
 
 These instructions will help you run the project on your local machine for development purposes.
 
-### Perquisites
+### Prerequisite
 
 Make sure to have everything that is required before you try to run the project.
 
