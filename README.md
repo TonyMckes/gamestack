@@ -1,8 +1,8 @@
-# GameStack - Practice Project
+# GameStack Landing - Practice Project
 
 Frontend built as part of my learning process of the framework [Astro](https://astro.build/), it is Gaming Platform Landing Page, a simple, clean, professional.
 
-> Design is not my own, check [acknowledgements](#acknowledgements).
+> The design is not my own, please take a look at the [acknowledgments](#acknowledgments).
 
 ## Tech Stack
 
@@ -52,7 +52,7 @@ npm run dev
 
 Open [https://localhost:3000/](https://localhost:3000/) in your browser to see the web page.
 
-## Acknowledgements
+## Acknowledgments
 
 - Thanks to [@Sanoj_Dilshan](https://www.figma.com/@Sanoj_Dilshan) for the [awesome design](https://www.figma.com/community/file/1058773912152023976)
 - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
